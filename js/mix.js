@@ -37,3 +37,9 @@
   const now = new Date();
 
   const formatted = "Date : " + formatter.format(now);
+
+
+   document.getElementById('blog-btn').addEventListener('click', function(){
+   	window.location.href="blog.html";
+
+ });
