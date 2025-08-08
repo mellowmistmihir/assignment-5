@@ -1,5 +1,6 @@
  document.getElementById('donation-open').addEventListener('click', function (){
          showSectionById('donate-section')
+       
 
  })
 
@@ -9,4 +10,6 @@
 
          showSectionById('history-section')
 
- })
+ }) 
+
+

@@ -3,6 +3,10 @@ document.getElementById('donate-btn').addEventListener('click',function(){
     const MainBalance = getTextFieldById ('balance')
    const  newBalance = MainBalance+donateAmount
     document.getElementById('balance').innerText=(newBalance);
+     if (isNaN(donateAmount) || donateAmount.trim() === "") {
+      alert(" Please enter a valid number as donation amount!");
+      return;
+    }
   
 //  add to history
            const div = document.createElement('div')
@@ -17,10 +21,7 @@ document.getElementById('donate-btn').addEventListener('click',function(){
 
 
 
-    if (isNaN(donateAmount) || donateAmount.trim() === "") {
-      alert(" Please enter a valid number as donation amount!");
-      return;
-    }
+   
 
 
 

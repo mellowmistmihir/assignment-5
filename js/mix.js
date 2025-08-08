@@ -19,6 +19,17 @@
      } 
 
 
+
+         function showbuttonbyid (id){
+          document.getElementById('donation-btn').classList.remove('bg-green')
+          document.getElementById('history-btn').classList.remove('bg-green')
+          document.getElementById(id).classList.add('bg-green')
+
+          
+         }
+
+
+
      // format
  const options = {
     timeZone: 'Asia/Dhaka',
@@ -43,3 +54,34 @@
    	window.location.href="blog.html";
 
  });
+
+
+
+ const donationBtn = document.getElementById("donation-open");
+        const historyBtn = document.getElementById("history-open");
+
+        
+        donationBtn.addEventListener("click", function () {
+            donationBtn.classList.add("active");   
+            historyBtn.classList.remove("active"); 
+        });
+
+        
+        historyBtn.addEventListener("click", function () {
+            historyBtn.classList.add("active");    
+            donationBtn.classList.remove("active");
+        });
+
+
+
+        const donateButton = document.getElementById('donate-btn');
+const modal = document.getElementById('confirmationModal');
+const closeBtn = document.getElementById('closeBtn');
+
+donateBtn.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
